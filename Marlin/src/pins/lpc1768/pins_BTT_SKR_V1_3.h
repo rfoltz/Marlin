@@ -208,9 +208,9 @@
 #define EXPA2_03_PIN                       -1
 #define EXPA2_04_PIN                       P1_31
 #define EXPA2_05_PIN                       P0_18
-#define EXPA2_06_PIN                       P3_25
+#define EXPA2_06_PIN                       P3_26
 #define EXPA2_07_PIN                       P0_16
-#define EXPA2_08_PIN                       P3_26
+#define EXPA2_08_PIN                       P3_25
 #define EXPA2_09_PIN                       P0_15
 #define EXPA2_10_PIN                       P0_17
 
