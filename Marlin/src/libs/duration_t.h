@@ -127,15 +127,11 @@ struct duration_t {
    *  59s
    */
   char* toString(char * const buffer) const {
-    const uint16_t y = this->year(),
-                   d = this->day() % 365,
-                   h = this->hour() % 24,
-                   m = this->minute() % 60,
-                   s = this->second() % 60;
+    const uint16_t h = this->hour(),
+                m = this->minute() % 60,
+                s = this->second() % 60;
 
-         if (y) sprintf_P(buffer, PSTR("%iy %id %ih %im %is"), y, d, h, m, s);
-    else if (d) sprintf_P(buffer, PSTR("%id %ih %im %is"), d, h, m, s);
-    else if (h) sprintf_P(buffer, PSTR("%ih %im %is"), h, m, s);
+      if (h) sprintf_P(buffer, PSTR("%ih %im %is"), h, m, s);
     else if (m) sprintf_P(buffer, PSTR("%im %is"), m, s);
     else sprintf_P(buffer, PSTR("%is"), s);
     return buffer;
